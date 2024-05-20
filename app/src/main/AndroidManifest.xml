@@ -13,6 +13,18 @@
         android:theme="@style/Theme.FirstOne"
         tools:targetApi="31">
         <activity
+            android:name=".util.recyclerview.GridDrinksRecyclerViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".util.recyclerview.HorLifeRecyclerViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".util.recyclerview.LinearMedicineRecyclerViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".recyclerview.MedicineRecyclerViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".recyclerview.LinearRecyclerViewActivity"
             android:exported="false" />
         <activity
@@ -25,10 +37,10 @@
             android:name=".ScenesExploreTest"
             android:exported="false" />
         <activity
-            android:name=".SlideActivity"
+            android:name=".LoginSlideActivity"
             android:exported="false" />
         <activity
-            android:name=".FuncRegisActivity"
+            android:name=".RegisActivity"
             android:exported="false" />
         <activity
             android:name=".ToastActivity"

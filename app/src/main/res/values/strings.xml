@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FirstOne</string>
+    <string name="Linear_list_recycler_view">列表视图</string>
 </resources>

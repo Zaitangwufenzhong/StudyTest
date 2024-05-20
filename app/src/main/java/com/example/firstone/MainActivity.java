@@ -1,33 +1,14 @@
 package com.example.firstone;
 
-import static android.content.ContentValues.TAG;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-import androidx.recyclerview.widget.RecyclerView;
-
-import com.example.firstone.util.ItemBean;
-import com.google.android.material.imageview.ShapeableImageView;
-
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -37,11 +18,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText mEtUserPwd;
     private Button mBtnTest;
 
-    List<ItemBean> mData;
-
-    //RecyclerView相关
-    private RecyclerView list;
-    //private ShapeableImageView mShapeableImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,11 +35,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnTest = findViewById(R.id.btn_test);
 
         // 获取recycler_view 控件
-        list = this.findViewById(R.id.recycler_view);
         /**
             准备数据(一般开发中，从网络获取，或后台没准备好也需要模拟，现在：模拟数据)
          */
-        initData();
+        //initData();
 
         // 监听
         mBtnLogin.setOnClickListener(this);
@@ -74,21 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     /**
         此方法用于初始化模拟数据
      */
-    private void initData() {
-        //<ListDataBea>(数据集合 Bea类) ----> Adapter(对应适配器) ---> setAdapter ---> 显示数据、
-        //创建模拟数据集合
-        mData = new ArrayList<>();
-        for(int i = 0;i < 10;i++){
-            //创建对象
-            ItemBean data = new ItemBean();
-            data.icon = ;
-            data.title = ;
 
-            //添加到集合中
-            mData.add(data);
-        }
-
-    }
 
     public void onClick(View v) {
         if (v.getId() == R.id.btn_login) {
@@ -100,11 +61,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             String ok = "登录成功";
             String error = "帐号或密码错误，请重新输入！";
             Intent intent = null;
-            if (username.equals("szy") && password.equals("20180917")) {
+            if (username.equals("wyz") && password.equals("20030909")) {
                 //(Toast底部普通版)
                 Toast.makeText(getApplicationContext(), ok, Toast.LENGTH_LONG).show();
                 //正确的跳转页面
-                intent = new Intent(MainActivity.this, SlideActivity.class);
+                intent = new Intent(MainActivity.this, LoginSlideActivity.class);
                 startActivity(intent);
             } else {
                 //错误的跳转页面( 弹出登陆失败  Toast居中版)
@@ -113,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 toastCenter.show();
             }
         } else if (v.getId() == R.id.btn_register) {
-            Intent intent = new Intent(MainActivity.this, FuncRegisActivity.class);
+            Intent intent = new Intent(MainActivity.this, RegisActivity.class);
             startActivity(intent);
         } else if (v.getId() == R.id.btn_test) {
             Intent intent = new Intent(MainActivity.this, init_page.class);
@@ -122,45 +83,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    //
-    //
-    //这里是菜单代码
-    //
-    //
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int itemId = item.getItemId();
-        if (itemId == R.id.list_view_vertical_stander) {
-            Log.d(TAG, "点击");
-        } else if (itemId == R.id.list_view_vertical_reverse) {
-
-        } else if (itemId == R.id.list_view_horizontal_stander) {
-
-        } else if (itemId == R.id.list_view_horizontal_reverse) {
-
-        } else if (itemId == R.id.grid_view_horizontal_stander) {
-
-        } else if (itemId == R.id.grid_view_horizontal_reverse) {
-
-        } else if (itemId == R.id.grid_view_vertical_stander) {
-
-        } else if (itemId == R.id.grid_view_vertical_reverse) {
-
-        } else if (itemId == R.id.stagger_view_horizontal_stander) {
-
-        } else if (itemId == R.id.stagger_view_horizontal_reverse) {
-
-        } else if (itemId == R.id.stagger_view_vertical_stander) {
-
-        } else if (itemId == R.id.stagger_view_vertical_reverse) {
-
-        }
-        return super.onOptionsItemSelected(item);
-    }
 }

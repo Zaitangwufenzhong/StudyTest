@@ -5,13 +5,15 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".recyclerview.LinearRecyclerViewActivity">
+    tools:context=".util.recyclerview.LinearMedicineRecyclerViewActivity">
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/gray"
-        />
+        android:background="@color/gray">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 </RelativeLayout>

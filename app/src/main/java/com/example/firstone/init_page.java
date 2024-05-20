@@ -8,9 +8,6 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class init_page extends AppCompatActivity implements View.OnClickListener{
     private ImageView mScenesEnter;
@@ -18,7 +15,7 @@ public class init_page extends AppCompatActivity implements View.OnClickListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_init_page);
+        setContentView(R.layout.test_activity_init_page);
 
         mScenesEnter = findViewById(R.id.pct_4);
 

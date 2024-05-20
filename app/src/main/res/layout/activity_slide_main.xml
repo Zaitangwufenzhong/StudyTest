@@ -67,7 +67,7 @@
             android:background="@drawable/border_button"
             />
         <Button
-            android:id="@+id/btn_layout_life"
+            android:id="@+id/btn_layout_main_life"
             android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
