@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background8"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="11:04"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginLeft="8dp"
+            android:textSize="20dp"
+        />
+        <ImageView
+            android:layout_marginLeft="260dp"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:background="@drawable/background_sig"/>
+        <ImageView
+            android:layout_marginLeft="7dp"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:background="@drawable/background_wifi"/>
+        <ImageView
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="22dp"
+            android:layout_height="13dp"
+            android:background="@drawable/background_elec"/>
+    </LinearLayout>
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/layout2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:shapeAppearanceOverlay="@style/RoundedImageView"
+        android:background="@drawable/background_head2"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="ziyuSheng"
+        android:textSize="23dp"
+        android:textColor="@color/black"
+
+        />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:maxLines="1"
+        android:padding="5dp"
+        android:hint="用户名："
+        />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="1"
+        android:padding="5dp"
+        android:hint="密 码："
+        android:inputType="textPassword"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="left"
+            android:layout_marginTop="20dp"
+            android:background="@color/blue"
+            android:text="登录"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" 
+            android:layout_gravity="right"
+            android:layout_marginTop="20dp"
+            android:background="#FFFFFF"
+            android:text="注册"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_test"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="test"
+        android:background="@color/green"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>
