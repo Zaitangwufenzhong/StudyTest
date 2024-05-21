@@ -6,7 +6,7 @@
     android:background="@color/white">
 
     <TextView
-        android:id="@+id/tv_title_medicine"
+        android:id="@+id/tv_title_medicine_username"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:textSize="20sp"
