@@ -16,6 +16,7 @@ import com.example.firstone.util.recyclerview.GridDrinksRecyclerViewActivity;
 import com.example.firstone.util.recyclerview.HorLifeRecyclerViewActivity;
 import com.example.firstone.util.recyclerview.LinearMedicineRecyclerViewActivity;
 import com.example.firstone.util.SlideMenu;
+import com.example.firstone.util.recyclerview.StaggerFoodRecyclerViewActivity;
 
 public class LoginSlideActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -24,6 +25,8 @@ public class LoginSlideActivity extends AppCompatActivity implements View.OnClic
     private SlideMenu slideMenu;
     private Button mBtnMdc;
     private Button mBtnLife;
+    private Button mBtnDrinks;
+    private Button mBtnFoods;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +41,8 @@ public class LoginSlideActivity extends AppCompatActivity implements View.OnClic
         slideMenu = findViewById(R.id.slideMenu);
         mBtnMdc = findViewById(R.id.btn_layout_medicine);
         mBtnLife = findViewById(R.id.btn_layout_main_life);
+        mBtnDrinks = findViewById(R.id.btn_layout_main_drinks);
+        mBtnFoods = findViewById(R.id.btn_layout_main_foods);
 
         //实现侧滑(点击加侧滑)
         user_head.setOnClickListener(new View.OnClickListener() {
@@ -49,6 +54,8 @@ public class LoginSlideActivity extends AppCompatActivity implements View.OnClic
 
         mBtnMdc.setOnClickListener(this);
         mBtnLife.setOnClickListener(this);
+        mBtnDrinks.setOnClickListener(this);
+        mBtnFoods.setOnClickListener(this);
     }
 
     public void onClick(View v){
@@ -61,6 +68,9 @@ public class LoginSlideActivity extends AppCompatActivity implements View.OnClic
             startActivity(intent);
         }else if(v.getId() == R.id.btn_layout_main_drinks){
             Intent intent = new Intent(LoginSlideActivity.this, GridDrinksRecyclerViewActivity.class);
+            startActivity(intent);
+        }else if(v.getId() == R.id.btn_layout_main_foods){
+            Intent intent = new Intent(LoginSlideActivity.this, StaggerFoodRecyclerViewActivity.class);
             startActivity(intent);
         }
     }

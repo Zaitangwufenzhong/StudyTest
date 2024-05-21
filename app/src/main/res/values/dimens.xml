@@ -2,4 +2,5 @@
 <!--分隔线高度为1dp-->
 <resources>
     <dimen name="dividerHeight">1dp</dimen>
+    <dimen name="dividerHeight2">5dp</dimen>
 </resources>

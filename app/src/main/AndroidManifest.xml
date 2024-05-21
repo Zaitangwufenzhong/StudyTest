@@ -13,6 +13,9 @@
         android:theme="@style/Theme.FirstOne"
         tools:targetApi="31">
         <activity
+            android:name=".util.recyclerview.StaggerFoodRecyclerViewActivity"
+            android:exported="false" />
+        <activity
             android:name=".util.recyclerview.GridDrinksRecyclerViewActivity"
             android:exported="false" />
         <activity
