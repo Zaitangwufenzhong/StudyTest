@@ -25,13 +25,6 @@ public class LinearMedicineRecyclerViewActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_linear_medicine_recycler_view);
 
-        //用于防止被顶部系统部件掩盖
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-
         mRvmain = findViewById(R.id.rv_main);
 
         //也可以传grid stagger

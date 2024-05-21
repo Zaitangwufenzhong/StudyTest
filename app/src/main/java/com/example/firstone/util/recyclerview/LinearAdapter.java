@@ -5,6 +5,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,7 +16,7 @@ import com.example.firstone.R;
 
 import java.util.List;
 
-public class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearViewHolder> {
+public class LinearAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     //存储传递给适配器的上下文
     private Context mContext;
@@ -35,19 +36,27 @@ public class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearView
      **/
     @NonNull
     @Override
-    public LinearAdapter.LinearViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
-        //view 就是每一个 item 长什么样子的 xml文件
-        //inflater（条目布局文件，新视图绑定适配器后添加到ViewGroup 通常是parent 也就是RecyclerView，ViewType类型，这里没使用）
-        return new LinearViewHolder(LayoutInflater.from(mContext).inflate(R.layout.layout_linear_medicine_item,parent,false));
+    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        if(viewType == 0){
+            //view 就是每一个 item 长什么样子的 xml文件
+            //inflater（条目布局文件，新视图绑定适配器后添加到ViewGroup 通常是parent 也就是RecyclerView，ViewType类型，这里没使用）
+            return new LinearViewHolder(LayoutInflater.from(mContext).inflate(R.layout.layout_linear_medicine_item,parent,false));
+        }else{
+            return new LinearViewHolderImage(LayoutInflater.from(mContext).inflate(R.layout.layout_linear_medicine_item_image,parent,false));
+        }
     }
     /**
      *  作用是绑定viewHolder
      **/
     @Override
-    public void onBindViewHolder(@NonNull LinearAdapter.LinearViewHolder holder, @SuppressLint("RecyclerView") int position) {
-        //可以设置一些内容
-        holder.textView.setText("medicine");
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
+        if(getItemViewType(position) == 0){
+            //可以设置一些内容
+            ((LinearViewHolder)holder).textView.setText("medicine");
+
+        }else{
+            ((LinearViewHolderImage)holder).textView.setText("药品名称");
+        }
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             //也可以通过回调 在外部实现
             @Override
@@ -55,6 +64,18 @@ public class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearView
                 Toast.makeText(mContext,"click...."+position,Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    /**
+     * 作用是获取viewType
+     **/
+    @Override
+    public int getItemViewType(int position) {
+        if (position % 2 == 0){
+            return 0;
+        } else {
+            return 1;
+        }
     }
 
     /**
@@ -73,6 +94,19 @@ public class LinearAdapter extends RecyclerView.Adapter<LinearAdapter.LinearView
             super(itemView);
             //布局控件在哪个布局里就要用该布局调用findViewById
             textView = itemView.findViewById(R.id.tv_title_medicine);
+        }
+    }
+
+    class LinearViewHolderImage extends RecyclerView.ViewHolder{
+
+        private TextView textView;
+        private ImageView imageView;
+
+        public LinearViewHolderImage(@NonNull View itemView) {
+            super(itemView);
+            //布局控件在哪个布局里就要用该布局调用findViewById
+            textView = itemView.findViewById(R.id.tv_title_medicine);
+            imageView = itemView.findViewById(R.id.tv_title_medicine_image);
         }
     }
 
