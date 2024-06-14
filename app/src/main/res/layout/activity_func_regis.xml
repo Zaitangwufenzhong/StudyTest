@@ -6,14 +6,76 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".RegisActivity">
+    tools:context=".RegisActivity"
+    android:background="@color/regis_background_big">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/regis_bg"/>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/regis_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/regis_bg"
+        app:title="@string/app_regis"
+        app:navigationIcon="@drawable/app_back" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:background="@drawable/regis_bg"/>
 
     <TextView
-        android:id="@+id/cv_func_login"
+        android:id="@+id/cv_func_regis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="跳转注册界面"
-        android:textSize="30dp"
+        android:text="@string/app_regis"
+        android:textColor="@color/black"
+        android:textSize="30sp"
         android:layout_gravity="center"/>
+
+    <EditText
+        android:id="@+id/regis_username"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:maxLines="1"
+        android:padding="5dp"
+        android:hint="@string/username"
+        />
+
+    <EditText
+        android:id="@+id/regis_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="1"
+        android:padding="5dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        />
+
+    <EditText
+        android:id="@+id/regis_re_password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="1"
+        android:padding="5dp"
+        android:hint="@string/re_password"
+        android:inputType="textPassword"
+        />
+
+    <Button
+        android:id="@+id/btn_regis"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/regis"
+        android:textSize="25sp"
+        android:background="@color/regis_bg"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
 
 </LinearLayout>

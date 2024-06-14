@@ -13,6 +13,10 @@
         android:theme="@style/Theme.FirstOne"
         tools:targetApi="31">
         <activity
+            android:name=".util.schedule.ScheduleMenuActivity"
+            android:theme="@style/color_diy"
+            android:exported="false" />
+        <activity
             android:name=".util.recyclerview.StaggerFoodRecyclerViewActivity"
             android:exported="false" />
         <activity
@@ -23,15 +27,6 @@
             android:exported="false" />
         <activity
             android:name=".util.recyclerview.LinearMedicineRecyclerViewActivity"
-            android:exported="false" />
-        <activity
-            android:name=".recyclerview.MedicineRecyclerViewActivity"
-            android:exported="false" />
-        <activity
-            android:name=".recyclerview.LinearRecyclerViewActivity"
-            android:exported="false" />
-        <activity
-            android:name=".recyclerview.RecyclerViewActivity"
             android:exported="false" />
         <activity
             android:name=".init_page"
@@ -47,9 +42,6 @@
             android:exported="false" />
         <activity
             android:name=".ToastActivity"
-            android:exported="false" />
-        <activity
-            android:name=".FunctionActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

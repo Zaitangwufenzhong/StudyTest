@@ -17,6 +17,7 @@ import com.example.firstone.util.recyclerview.HorLifeRecyclerViewActivity;
 import com.example.firstone.util.recyclerview.LinearMedicineRecyclerViewActivity;
 import com.example.firstone.util.SlideMenu;
 import com.example.firstone.util.recyclerview.StaggerFoodRecyclerViewActivity;
+import com.example.firstone.util.schedule.ScheduleMenuActivity;
 
 public class LoginSlideActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -27,6 +28,7 @@ public class LoginSlideActivity extends AppCompatActivity implements View.OnClic
     private Button mBtnLife;
     private Button mBtnDrinks;
     private Button mBtnFoods;
+    private Button mBtnSchedule;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +45,7 @@ public class LoginSlideActivity extends AppCompatActivity implements View.OnClic
         mBtnLife = findViewById(R.id.btn_layout_main_life);
         mBtnDrinks = findViewById(R.id.btn_layout_main_drinks);
         mBtnFoods = findViewById(R.id.btn_layout_main_foods);
+        mBtnSchedule = findViewById(R.id.btn_layout_main_schedule);
 
         //实现侧滑(点击加侧滑)
         user_head.setOnClickListener(new View.OnClickListener() {
@@ -56,21 +59,25 @@ public class LoginSlideActivity extends AppCompatActivity implements View.OnClic
         mBtnLife.setOnClickListener(this);
         mBtnDrinks.setOnClickListener(this);
         mBtnFoods.setOnClickListener(this);
+        mBtnSchedule.setOnClickListener(this);
     }
 
     public void onClick(View v){
         //用switch报错：why --> 在 Android 开发中，资源 ID（如 R.id.btn_layout_medicine）在编译时是未知的。它们是在编译过程中由 aapt（Android Asset Packaging Tool）生成的。因此，它们不是编译时常量，而是在运行时分配的值。
-        if(v.getId() == R.id.btn_layout_medicine){
+        if (v.getId() == R.id.btn_layout_medicine) {
             Intent intent = new Intent(LoginSlideActivity.this, LinearMedicineRecyclerViewActivity.class);
             startActivity(intent);
-        }else if(v.getId() == R.id.btn_layout_main_life){
+        } else if (v.getId() == R.id.btn_layout_main_life) {
             Intent intent = new Intent(LoginSlideActivity.this, HorLifeRecyclerViewActivity.class);
             startActivity(intent);
-        }else if(v.getId() == R.id.btn_layout_main_drinks){
+        } else if (v.getId() == R.id.btn_layout_main_drinks) {
             Intent intent = new Intent(LoginSlideActivity.this, GridDrinksRecyclerViewActivity.class);
             startActivity(intent);
-        }else if(v.getId() == R.id.btn_layout_main_foods){
+        } else if (v.getId() == R.id.btn_layout_main_foods) {
             Intent intent = new Intent(LoginSlideActivity.this, StaggerFoodRecyclerViewActivity.class);
+            startActivity(intent);
+        } else if (v.getId() == R.id.btn_layout_main_schedule) {
+            Intent intent = new Intent(LoginSlideActivity.this, ScheduleMenuActivity.class);
             startActivity(intent);
         }
     }

@@ -2,4 +2,20 @@
     <string name="app_name">FirstOne</string>
     <string name="Linear_list_recycler_view">列表视图</string>
     <string name="life_menu">日用品目录</string>
+    <string name="app_study">学习</string>
+    <string name="app_work">工作</string>
+    <string name="app_sport">运动</string>
+    <string name="app_sleep">休息</string>
+    <string name="app_eat">吃饭</string>
+
+    <string name="study_fragment">study fragment</string>
+    <string name="sport_fragment">sport fragment</string>
+    <string name="work_fragment">work fragment</string>
+    <string name="sleep_fragment">sleep fragment</string>
+    <string name="eat_fragment">eat fragment</string>
+    <string name="app_regis">用户注册</string>
+    <string name="regis">注册</string>
+    <string name="password">密 码：</string>
+    <string name="username">用户名：</string>
+    <string name="re_password">确 认 密 码：</string>
 </resources>

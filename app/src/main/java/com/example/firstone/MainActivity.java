@@ -1,7 +1,9 @@
 package com.example.firstone;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -17,7 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private EditText mEtUserId;
     private EditText mEtUserPwd;
     private Button mBtnTest;
-
+    private SharedPreferences mSharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +36,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mEtUserPwd = findViewById(R.id.password);
         mBtnTest = findViewById(R.id.btn_test);
 
-        // 获取recycler_view 控件
-        /**
-            准备数据(一般开发中，从网络获取，或后台没准备好也需要模拟，现在：模拟数据)
-         */
-        //initData();
+        //获取mSharedPreferences
+        mSharedPreferences = getSharedPreferences("user",MODE_PRIVATE);
+        mEtUserId = findViewById(R.id.username);
+        mEtUserPwd = findViewById(R.id.password);
 
         // 监听
         mBtnLogin.setOnClickListener(this);
@@ -60,18 +61,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //输出文本
             String ok = "登录成功";
             String error = "帐号或密码错误，请重新输入！";
+            String empty = "帐号或密码不能为空！";
             Intent intent = null;
-            if (username.equals("wyz") && password.equals("20030909")) {
+            if (TextUtils.isEmpty(username) && TextUtils.isEmpty(password)) {
                 //(Toast底部普通版)
-                Toast.makeText(getApplicationContext(), ok, Toast.LENGTH_LONG).show();
-                //正确的跳转页面
-                intent = new Intent(MainActivity.this, LoginSlideActivity.class);
-                startActivity(intent);
+                Toast.makeText(getApplicationContext(), empty, Toast.LENGTH_LONG).show();
             } else {
-                //错误的跳转页面( 弹出登陆失败  Toast居中版)
-                Toast toastCenter = Toast.makeText(getApplicationContext(), error, Toast.LENGTH_SHORT);
-                toastCenter.setGravity(Gravity.CENTER, 0, 0);
-                toastCenter.show();
+                String name = mSharedPreferences.getString("username",null);
+                String pwd = mSharedPreferences.getString("password",null);
+                if (username.equals(name) && password.equals(pwd)) {
+                    //正确的跳转页面
+                    Toast.makeText(getApplicationContext(), ok, Toast.LENGTH_LONG).show();
+                    intent = new Intent(MainActivity.this, LoginSlideActivity.class);
+                    startActivity(intent);
+                } else {
+                    //错误的跳转页面( 弹出登陆失败  Toast居中版)
+                    Toast toastCenter = Toast.makeText(getApplicationContext(), error, Toast.LENGTH_SHORT);
+                    toastCenter.setGravity(Gravity.CENTER, 0, 0);
+                    toastCenter.show();
+                }
             }
         } else if (v.getId() == R.id.btn_register) {
             Intent intent = new Intent(MainActivity.this, RegisActivity.class);
