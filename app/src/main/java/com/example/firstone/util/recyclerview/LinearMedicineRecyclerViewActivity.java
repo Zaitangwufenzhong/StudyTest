@@ -34,23 +34,9 @@ public class LinearMedicineRecyclerViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_linear_medicine_recycler_view);
 
         mList = findViewById(R.id.rv_main);
-
         //准备数据
         initData();
-
-
         mRvmain = findViewById(R.id.rv_main);
-
-//        //也可以传grid stagger
-//        mRvmain.setLayoutManager(new LinearLayoutManager(LinearMedicineRecyclerViewActivity.this));
-//        //添加分割线
-//        mRvmain.addItemDecoration(new MyDecoration());
-//        mRvmain.setAdapter(new LinearAdapter(LinearMedicineRecyclerViewActivity.this, new LinearAdapter.OnItemClickListener() {
-//            @Override
-//            public void onClick(int pos) {
-//                Toast.makeText(LinearMedicineRecyclerViewActivity.this,"click  "+pos,Toast.LENGTH_SHORT).show();
-//            }
-//        }));
     }
 
     private void initData(){

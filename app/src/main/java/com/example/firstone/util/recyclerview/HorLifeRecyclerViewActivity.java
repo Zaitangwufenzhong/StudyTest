@@ -15,10 +15,18 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.firstone.R;
+import com.example.firstone.util.recyclerview.Bean.Datas;
+import com.example.firstone.util.recyclerview.Bean.ItemBean;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class HorLifeRecyclerViewActivity extends AppCompatActivity {
 
     private RecyclerView mRvHor;
+
+    private RecyclerView mList;
+    List<ItemBean> mData;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,20 +38,36 @@ public class HorLifeRecyclerViewActivity extends AppCompatActivity {
             return insets;
         });
 
+        mList = findViewById(R.id.rv_hor);
+        //准备数据
+        initData();
         mRvHor = findViewById(R.id.rv_hor);
+
+    }
+
+    private void initData(){
+        mData = new ArrayList<>();
+
+        for(int i = 0; i < Datas.icons.length; i++) {
+            ItemBean data = new ItemBean();
+            data.icon = Datas.icons[i];
+            data.title="第 "+ i + " 个日用品";
+            //添加到集合
+            mData.add(data);
+        }
+
         //设置成水平
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(HorLifeRecyclerViewActivity.this);
         linearLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
-        mRvHor.setLayoutManager(linearLayoutManager);
-        mRvHor.addItemDecoration(new MyDecoration());
-        mRvHor.setAdapter(new HorAdapter(HorLifeRecyclerViewActivity.this, new HorAdapter.OnItemClickListener() {
-            @Override
-            public void onClick(int pos) {
-                Toast.makeText(HorLifeRecyclerViewActivity.this,"click "+pos,Toast.LENGTH_SHORT).show();
-            }
-        }));
+        mList.setLayoutManager(linearLayoutManager);
+        //mRvHor.addItemDecoration(new MyDecoration());
 
+        //创建适配器
+        HorAdapter adapter = new HorAdapter(mData);
+        //添加到RecyclerView中
+        mList.setAdapter(adapter);
     }
+
     //添加分隔线
     class MyDecoration extends RecyclerView.ItemDecoration{
         @Override
