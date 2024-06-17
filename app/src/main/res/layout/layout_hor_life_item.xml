@@ -17,8 +17,9 @@
         android:id="@+id/tv_title_life"
         android:layout_width="200dp"
         android:layout_height="120dp"
-        android:layout_marginTop="100dp"
-        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
+        android:gravity="center"
+        android:textColor="@color/black"
         android:textSize="40sp" />
 
     <ImageView

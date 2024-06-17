@@ -3,7 +3,6 @@ package com.example.firstone.util.recyclerview;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
@@ -15,7 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.firstone.R;
-import com.example.firstone.util.recyclerview.Bean.Datas;
+import com.example.firstone.util.recyclerview.Bean.LifeData;
 import com.example.firstone.util.recyclerview.Bean.ItemBean;
 
 import java.util.ArrayList;
@@ -48,10 +47,10 @@ public class HorLifeRecyclerViewActivity extends AppCompatActivity {
     private void initData(){
         mData = new ArrayList<>();
 
-        for(int i = 0; i < Datas.icons.length; i++) {
+        for(int i = 0; i < LifeData.icons.length; i++) {
             ItemBean data = new ItemBean();
-            data.icon = Datas.icons[i];
-            data.title="第 "+ i + " 个日用品";
+            data.icon = LifeData.icons[i];
+            data.title= LifeData.title[i];
             //添加到集合
             mData.add(data);
         }

@@ -1,5 +1,6 @@
 package com.example.firstone.util.recyclerview;
 
+import android.content.ClipData;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.View;
@@ -16,10 +17,18 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.firstone.R;
+import com.example.firstone.util.recyclerview.Bean.DrinksData;
+import com.example.firstone.util.recyclerview.Bean.LifeData;
+import com.example.firstone.util.recyclerview.Bean.ItemBean;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class GridDrinksRecyclerViewActivity extends AppCompatActivity {
 
     private RecyclerView mRvGrid;
+    private RecyclerView mList;
+    List<ItemBean> mData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,17 +41,29 @@ public class GridDrinksRecyclerViewActivity extends AppCompatActivity {
             return insets;
         });
 
+        mList = findViewById(R.id.rv_grid);
+        initData();
         mRvGrid = findViewById(R.id.rv_grid);
-        //(,有几列)
-        mRvGrid.setLayoutManager(new GridLayoutManager(GridDrinksRecyclerViewActivity.this,4));
-        mRvGrid.addItemDecoration(new MyDecoration());
-        mRvGrid.setAdapter(new GridAdapter(GridDrinksRecyclerViewActivity.this, new GridAdapter.OnItemClickListener() {
-            @Override
-            public void onClick(int pos) {
-                Toast.makeText(GridDrinksRecyclerViewActivity.this,"click "+pos,Toast.LENGTH_SHORT).show();
-            }
-        }));
     }
+
+    private void initData(){
+        mData = new ArrayList<>();
+
+        for(int i = 0; i < DrinksData.title.length; i++) {
+            ItemBean data = new ItemBean();
+            data.title= DrinksData.title[i];
+            //添加到集合
+            mData.add(data);
+        }
+        //(,有几列)
+        mList.setLayoutManager(new GridLayoutManager(GridDrinksRecyclerViewActivity.this,4));
+        //mList.addItemDecoration(new MyDecoration());
+
+        GridAdapter adapter = new GridAdapter(mData);
+        mList.setAdapter(adapter);
+
+    }
+
     //添加分隔线
     class MyDecoration extends RecyclerView.ItemDecoration{
         @Override

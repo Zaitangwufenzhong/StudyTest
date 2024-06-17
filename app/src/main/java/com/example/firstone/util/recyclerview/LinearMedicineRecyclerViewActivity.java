@@ -3,19 +3,15 @@ package com.example.firstone.util.recyclerview;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.firstone.R;
-import com.example.firstone.util.recyclerview.Bean.Datas;
+import com.example.firstone.util.recyclerview.Bean.MedicineData;
 import com.example.firstone.util.recyclerview.Bean.ItemBean;
 
 import java.util.ArrayList;
@@ -43,10 +39,10 @@ public class LinearMedicineRecyclerViewActivity extends AppCompatActivity {
         //创建数据集合
         mData = new ArrayList<>();
 
-        for(int i = 0; i < Datas.icons.length; i++){
+        for(int i = 0; i < MedicineData.icons.length; i++){
             ItemBean data = new ItemBean();
-            data.icon = Datas.icons[i];
-            data.title="第 "+ i + " 个药品";
+            data.icon = MedicineData.icons[i];
+            data.title= MedicineData.title[i];
             //添加到集合
             mData.add(data);
         }
@@ -54,6 +50,7 @@ public class LinearMedicineRecyclerViewActivity extends AppCompatActivity {
         //需要设置布局管理器
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         mList.setLayoutManager(layoutManager);
+        //mRvmain.addItemDecoration(new MyDecoration());
 
         //创建适配器
         LinearAdapter adapter = new LinearAdapter(mData);

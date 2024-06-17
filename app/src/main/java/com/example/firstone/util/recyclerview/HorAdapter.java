@@ -2,18 +2,15 @@ package com.example.firstone.util.recyclerview;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.firstone.R;
-import com.example.firstone.util.recyclerview.Bean.Datas;
 import com.example.firstone.util.recyclerview.Bean.ItemBean;
 
 import java.util.List;
@@ -25,7 +22,7 @@ public class HorAdapter extends RecyclerView.Adapter<HorAdapter.LinearViewHolder
     private List<ItemBean> mData;
 
     //适配器的构造函数
-    public HorAdapter(Context context, OnItemClickListener listener){
+    public HorAdapter(Context context, OnItemClickListener listener) {
         this.mContext = context;
         this.mListener = listener;
     }
@@ -59,7 +56,7 @@ public class HorAdapter extends RecyclerView.Adapter<HorAdapter.LinearViewHolder
         return 0;
     }
 
-    class LinearViewHolder extends RecyclerView.ViewHolder{
+    class LinearViewHolder extends RecyclerView.ViewHolder {
 
         private TextView mTitle;
         private ImageView mIcon;
@@ -73,7 +70,7 @@ public class HorAdapter extends RecyclerView.Adapter<HorAdapter.LinearViewHolder
         }
 
         //设置数据
-        public void setData(ItemBean itemBean){
+        public void setData(ItemBean itemBean) {
             mIcon.setImageResource(itemBean.icon);
             mTitle.setText(itemBean.title);
         }
@@ -81,7 +78,7 @@ public class HorAdapter extends RecyclerView.Adapter<HorAdapter.LinearViewHolder
 
 
 
-    public interface OnItemClickListener{
+    public interface OnItemClickListener {
         void onClick(int pos);
     }
 }
