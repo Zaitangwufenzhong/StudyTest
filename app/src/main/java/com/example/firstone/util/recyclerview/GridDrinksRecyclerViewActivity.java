@@ -1,6 +1,7 @@
 package com.example.firstone.util.recyclerview;
 
 import android.content.ClipData;
+import android.content.Context;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.View;
@@ -18,7 +19,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.firstone.R;
 import com.example.firstone.util.recyclerview.Bean.DrinksData;
-import com.example.firstone.util.recyclerview.Bean.LifeData;
 import com.example.firstone.util.recyclerview.Bean.ItemBean;
 
 import java.util.ArrayList;
@@ -57,7 +57,12 @@ public class GridDrinksRecyclerViewActivity extends AppCompatActivity {
         }
         //(,有几列)
         mList.setLayoutManager(new GridLayoutManager(GridDrinksRecyclerViewActivity.this,4));
-        //mList.addItemDecoration(new MyDecoration());
+
+        // 创建 MyDecoration 的实例并传递当前活动的上下文
+        MyDecoration itemDecoration = new MyDecoration(GridDrinksRecyclerViewActivity.this);
+
+        // 将 MyDecoration 添加到 RecyclerView
+        mList.addItemDecoration(itemDecoration);
 
         GridAdapter adapter = new GridAdapter(mData);
         mList.setAdapter(adapter);
@@ -65,11 +70,17 @@ public class GridDrinksRecyclerViewActivity extends AppCompatActivity {
     }
 
     //添加分隔线
-    class MyDecoration extends RecyclerView.ItemDecoration{
+    public class MyDecoration extends RecyclerView.ItemDecoration {
+        private Context mContext;
+
+        public MyDecoration(Context context) {
+            this.mContext = context;
+        }
+
         @Override
         public void getItemOffsets(@NonNull Rect outRect, @NonNull View view, @NonNull RecyclerView parent, @NonNull RecyclerView.State state) {
             super.getItemOffsets(outRect, view, parent, state);
-            outRect.set(0,0,getResources().getDimensionPixelOffset(R.dimen.dividerHeight),getResources().getDimensionPixelOffset(R.dimen.dividerHeight));
+            outRect.set(0, 0, mContext.getResources().getDimensionPixelOffset(R.dimen.dividerHeight), mContext.getResources().getDimensionPixelOffset(R.dimen.dividerHeight));
         }
     }
 
