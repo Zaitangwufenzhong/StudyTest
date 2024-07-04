@@ -14,4 +14,5 @@
     <color name="gray">#6B696B</color>
     <color name="regis_bg">#B4E3F5</color>
     <color name="regis_background_big">#EAF5FA</color>
+    <color name="app_main_forget_text">#1C66E5</color>
 </resources>

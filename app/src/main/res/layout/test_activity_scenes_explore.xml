@@ -22,7 +22,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginTop="45dp"
-            android:background="@drawable/left"
+            android:background="@mipmap/left"
             />
         <TextView
             android:id="@+id/text_scenes"
@@ -50,20 +50,20 @@
             android:layout_marginLeft="300dp"
             android:layout_width="23dp"
             android:layout_height="23dp"
-            android:background="@drawable/background_sig"/>
+            android:background="@mipmap/background_sig"/>
         <ImageView
             android:id="@+id/wifi"
             android:layout_marginLeft="330dp"
             android:layout_width="23dp"
             android:layout_height="23dp"
-            android:background="@drawable/background_wifi"/>
+            android:background="@mipmap/background_wifi"/>
         <ImageView
             android:id="@+id/ele"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="360dp"
             android:layout_width="22dp"
             android:layout_height="13dp"
-            android:background="@drawable/background_elec"/>
+            android:background="@mipmap/background_elec"/>
     </RelativeLayout>
     <TextView
         android:id="@+id/attention1"
@@ -112,7 +112,7 @@
                 android:layout_height="35dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="30dp"
-                android:background="@drawable/chat"
+                android:background="@mipmap/chat"
                 />
             <ImageView
                 android:id="@+id/chat_right"
@@ -120,7 +120,7 @@
                 android:layout_height="20dp"
                 android:layout_marginLeft="170dp"
                 android:layout_marginTop="27dp"
-                android:background="@drawable/right"
+                android:background="@mipmap/right"
                 />
             <TextView
                 android:id="@+id/text_chat"
@@ -147,7 +147,7 @@
                 android:layout_height="35dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="220dp"
-                android:background="@drawable/player"
+                android:background="@mipmap/player"
                 />
             <ImageView
                 android:id="@+id/player_right"
@@ -155,7 +155,7 @@
                 android:layout_height="20dp"
                 android:layout_marginLeft="350dp"
                 android:layout_marginTop="27dp"
-                android:background="@drawable/right"
+                android:background="@mipmap/right"
                 />
             <TextView
                 android:id="@+id/text_player"
@@ -203,7 +203,7 @@
                 android:layout_height="35dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="30dp"
-                android:background="@drawable/sing"
+                android:background="@mipmap/sing"
                 />
             <ImageView
                 android:id="@+id/sing_right"
@@ -211,7 +211,7 @@
                 android:layout_height="20dp"
                 android:layout_marginLeft="170dp"
                 android:layout_marginTop="27dp"
-                android:background="@drawable/right"
+                android:background="@mipmap/right"
                 />
             <TextView
                 android:id="@+id/text_sing"
@@ -238,7 +238,7 @@
                 android:layout_height="30dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="220dp"
-                android:background="@drawable/video_make"
+                android:background="@mipmap/video_make"
                 />
             <ImageView
                 android:id="@+id/make_right"
@@ -246,7 +246,7 @@
                 android:layout_height="20dp"
                 android:layout_marginLeft="350dp"
                 android:layout_marginTop="27dp"
-                android:background="@drawable/right"
+                android:background="@mipmap/right"
                 />
             <TextView
                 android:id="@+id/text_make"
@@ -294,7 +294,7 @@
                 android:layout_height="35dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="30dp"
-                android:background="@drawable/call_chat"
+                android:background="@mipmap/call_chat"
                 />
             <ImageView
                 android:id="@+id/call_chat_right"
@@ -302,7 +302,7 @@
                 android:layout_height="20dp"
                 android:layout_marginLeft="170dp"
                 android:layout_marginTop="27dp"
-                android:background="@drawable/right"
+                android:background="@mipmap/right"
                 />
             <TextView
                 android:id="@+id/text_call_chat"
@@ -329,7 +329,7 @@
                 android:layout_height="35dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="220dp"
-                android:background="@drawable/virtual"
+                android:background="@mipmap/virtual"
                 />
             <ImageView
                 android:id="@+id/virtual_right"
@@ -337,7 +337,7 @@
                 android:layout_height="20dp"
                 android:layout_marginLeft="350dp"
                 android:layout_marginTop="27dp"
-                android:background="@drawable/right"
+                android:background="@mipmap/right"
                 />
             <TextView
                 android:id="@+id/text_virtual"

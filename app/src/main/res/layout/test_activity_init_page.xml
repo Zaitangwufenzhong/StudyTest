@@ -27,13 +27,13 @@
             android:layout_height="35dp"
             android:layout_marginTop="15dp"
             android:layout_marginLeft="33dp"
-            android:background="@drawable/call"
+            android:background="@mipmap/call"
             />
         <ImageView
             android:id="@+id/call_uikit"
             android:layout_width="50dp"
             android:layout_height="25dp"
-            android:background="@drawable/background_uikit"
+            android:background="@mipmap/background_uikit"
             android:layout_marginLeft="152dp"
             android:layout_marginTop="19dp"
             />
@@ -41,7 +41,7 @@
             android:id="@+id/call_right"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:background="@drawable/right"
+            android:background="@mipmap/right"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="360dp"
             />
@@ -81,7 +81,7 @@
             android:id="@+id/conf_uikit"
             android:layout_width="50dp"
             android:layout_height="25dp"
-            android:background="@drawable/background_uikit"
+            android:background="@mipmap/background_uikit"
             android:layout_marginLeft="255dp"
             android:layout_marginTop="19dp"
             />
@@ -91,13 +91,13 @@
             android:layout_height="35dp"
             android:layout_marginTop="15dp"
             android:layout_marginLeft="33dp"
-            android:background="@drawable/video"
+            android:background="@mipmap/video"
             />
         <ImageView
             android:id="@+id/conf_right"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:background="@drawable/right"
+            android:background="@mipmap/right"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="360dp"
             />
@@ -139,13 +139,13 @@
             android:layout_height="35dp"
             android:layout_marginTop="15dp"
             android:layout_marginLeft="33dp"
-            android:background="@drawable/person"
+            android:background="@mipmap/person"
             />
         <ImageView
             android:id="@+id/beauty_ar_right"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:background="@drawable/right"
+            android:background="@mipmap/right"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="360dp"
             />
@@ -187,13 +187,13 @@
             android:layout_height="35dp"
             android:layout_marginTop="15dp"
             android:layout_marginLeft="33dp"
-            android:background="@drawable/person"
+            android:background="@mipmap/person"
             />
         <ImageView
             android:id="@+id/scenes_right"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:background="@drawable/right"
+            android:background="@mipmap/right"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="360dp"
             />

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background8"
+    android:background="@mipmap/background8"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -14,7 +14,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         app:shapeAppearanceOverlay="@style/RoundedImageView"
-        android:background="@drawable/background_head2"
+        android:background="@mipmap/background_head2"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         />
@@ -23,8 +23,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="5dp"
-        android:text="clutter APP"
-        android:textSize="23dp"
+        android:text="@string/clutter_app"
+        android:textSize="23sp"
         android:textColor="@color/black"
 
         />
@@ -36,7 +36,7 @@
         android:layout_marginTop="30dp"
         android:maxLines="1"
         android:padding="5dp"
-        android:hint="用户名："
+        android:hint="@string/username"
         />
 
     <EditText
@@ -46,7 +46,7 @@
         android:layout_marginTop="10dp"
         android:maxLines="1"
         android:padding="5dp"
-        android:hint="密 码："
+        android:hint="@string/password"
         android:inputType="textPassword"
         />
 
@@ -61,30 +61,42 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_gravity="left"
             android:layout_marginTop="20dp"
             android:background="@color/blue"
-            android:text="登录"
+            android:text="@string/login"
             android:textColor="#FFFFFF" />
 
         <Button
             android:id="@+id/btn_register"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" 
-            android:layout_gravity="right"
+            android:layout_weight="1"
             android:layout_marginTop="20dp"
             android:background="#FFFFFF"
-            android:text="注册"
+            android:text="@string/regis"
             android:textColor="@color/black"
             />
     </LinearLayout>
-    <Button
-        android:id="@+id/btn_test"
-        android:layout_width="200dp"
+
+    <TextView
+        android:id="@+id/text_forget"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="test"
-        android:background="@color/green"
-        />
+        android:text="@string/app_password_forget"
+        android:textSize="15sp"
+        android:textColor="@color/app_main_forget_text"
+        android:textStyle=""
+        android:layout_gravity="right"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"/>
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_test"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="@string/app_test"-->
+<!--        android:background="@color/green"-->
+<!--        />-->
 </LinearLayout>

@@ -2,12 +2,14 @@ package com.example.firstone;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,14 +20,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnRegist;
     private EditText mEtUserId;
     private EditText mEtUserPwd;
-    private Button mBtnTest;
+    //private Button mBtnTest;
     private SharedPreferences mSharedPreferences;
+    private TextView mTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // 设置状态栏颜色，实现沉浸式状态栏效果
-        // getWindow().setStatusBarColor(Color.TRANSPARENT);
 
         setContentView(R.layout.activity_main);
 
@@ -34,17 +35,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnRegist = findViewById(R.id.btn_register);
         mEtUserId = findViewById(R.id.username);
         mEtUserPwd = findViewById(R.id.password);
-        mBtnTest = findViewById(R.id.btn_test);
+        //mBtnTest = findViewById(R.id.btn_test);
+        mTextView = findViewById(R.id.text_forget);
+        mTextView.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG);
+
 
         //获取mSharedPreferences
         mSharedPreferences = getSharedPreferences("user",MODE_PRIVATE);
         mEtUserId = findViewById(R.id.username);
         mEtUserPwd = findViewById(R.id.password);
 
+
+
         // 监听
         mBtnLogin.setOnClickListener(this);
         mBtnRegist.setOnClickListener(this);
-        mBtnTest.setOnClickListener(this);
+        //mBtnTest.setOnClickListener(this);
+        mTextView.setOnClickListener(this);
+
     }
 
     /**
@@ -84,8 +92,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (v.getId() == R.id.btn_register) {
             Intent intent = new Intent(MainActivity.this, RegisActivity.class);
             startActivity(intent);
-        } else if (v.getId() == R.id.btn_test) {
-            Intent intent = new Intent(MainActivity.this, init_page.class);
+        } else if (v.getId() == R.id.text_forget) {
+            Intent intent = new Intent(MainActivity.this, VerifiedCodeActivity.class);
             startActivity(intent);
         }
 

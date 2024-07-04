@@ -39,9 +39,9 @@ public class StaggerAdapter extends RecyclerView.Adapter<StaggerAdapter.LinearVi
     public void onBindViewHolder(@NonNull StaggerAdapter.LinearViewHolder holder, @SuppressLint("RecyclerView") int position) {
         //可以设置一些内容
         if(position % 2 != 0 ) {
-            holder.imageView.setImageResource(R.drawable.image1);
+            holder.imageView.setImageResource(R.mipmap.image1);
         } else {
-            holder.imageView.setImageResource(R.drawable.image2);
+            holder.imageView.setImageResource(R.mipmap.image2);
         }
         holder.itemView.setOnClickListener((v) -> {mListener.onClick(position);});
     }

@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +17,7 @@ public class RegisActivity extends AppCompatActivity {
     private EditText et_username;
     private EditText et_password;
     private EditText et_re_password;
+    //private Toolbar mToolbar;
     private SharedPreferences mSharedPreferences;
 
     @Override
@@ -23,6 +25,8 @@ public class RegisActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_func_regis);
+
+        //mToolbar = findViewById(R.id.regis_toolbar);
 
         //获取mSharedPreferences
         //保存一些简单的数据

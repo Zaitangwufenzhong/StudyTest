@@ -11,7 +11,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="30dp"
         android:background="@color/regis_bg"/>
 
     <androidx.appcompat.widget.Toolbar
@@ -25,7 +25,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="190dp"
-        android:background="@drawable/regis_bg"/>
+        android:background="@mipmap/regis_bg"/>
 
     <TextView
         android:id="@+id/cv_func_regis"

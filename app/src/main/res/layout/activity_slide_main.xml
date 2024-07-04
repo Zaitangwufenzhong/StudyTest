@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background8_1"
+    android:background="@mipmap/background8_1"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
         android:layout_width="wrap_content"
@@ -14,7 +14,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             app:shapeAppearanceOverlay="@style/RoundedImageView"
-            android:background="@drawable/background_head2"
+            android:background="@mipmap/background_head2"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"

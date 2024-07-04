@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">FirstOne</string>
+    <string name="app_name">Clutter</string>
     <string name="Linear_list_recycler_view">列表视图</string>
     <string name="life_menu">日用品目录</string>
     <string name="app_study">学习</string>
@@ -14,7 +14,14 @@
     <string name="sleep_fragment">sleep fragment</string>
     <string name="eat_fragment">eat fragment</string>
     <string name="app_regis">用户注册</string>
+    <string name="app_verified_code">短信验证码</string>
+    <string name="app_verified_code_login">验证码登录</string>
+    <string name="app_password_forget">忘记密码？</string>
+    <string name="app_verified_code_send">发送短信验证码</string>
+    <string name="app_verified_code_input">输入短信验证码：</string>
     <string name="regis">注册</string>
+    <string name="login">登录</string>
+    <string name="ok">确认</string>
     <string name="password">密 码：</string>
     <string name="username">用户名：</string>
     <string name="re_password">确 认 密 码：</string>
@@ -22,4 +29,6 @@
     <string name="app_web_toolbar">WebView</string>
     <string name="app_web_work_test">test</string>
     <string name="app_web_work_test2">test2</string>
+    <string name="app_test">test</string>
+    <string name="clutter_app">clutter APP</string>
 </resources>

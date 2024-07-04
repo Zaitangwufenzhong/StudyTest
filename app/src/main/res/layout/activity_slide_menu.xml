@@ -3,7 +3,7 @@
     android:layout_width="290dp"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background8_1">
+    android:background="@mipmap/background8_1">
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
@@ -22,7 +22,7 @@
             android:layout_height="45dp"
             android:layout_marginTop="47dp"
             android:layout_marginLeft="20dp"
-            android:background="@drawable/girl_work"
+            android:background="@mipmap/girl_work"
             />
     </RelativeLayout>
 

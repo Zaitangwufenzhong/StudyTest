@@ -2,26 +2,26 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/study"
         android:title="@string/app_study"
-        android:icon="@drawable/study">
+        android:icon="@mipmap/study">
     </item>
 
     <item android:id="@+id/work"
         android:title="@string/app_work"
-        android:icon="@drawable/work">
+        android:icon="@mipmap/work">
     </item>
 
     <item android:id="@+id/sport"
         android:title="@string/app_sport"
-        android:icon="@drawable/sport">
+        android:icon="@mipmap/sport">
     </item>
 
     <item android:id="@+id/sleep"
         android:title="@string/app_sleep"
-        android:icon="@drawable/sleep">
+        android:icon="@mipmap/sleep">
     </item>
 
     <item android:id="@+id/eat"
         android:title="@string/app_eat"
-        android:icon="@drawable/eat">
+        android:icon="@mipmap/eat">
     </item>
 </menu>
