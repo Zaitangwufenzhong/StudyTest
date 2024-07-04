@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +24,7 @@ public class LoginSlideActivity extends AppCompatActivity implements View.OnClic
 
     //声明控件
     private ImageView user_head;
+    private TextView mTvUsername;
     private SlideMenu slideMenu;
     private Button mBtnMdc;
     private Button mBtnLife;
@@ -40,6 +42,14 @@ public class LoginSlideActivity extends AppCompatActivity implements View.OnClic
             return insets;
         });
         user_head = findViewById(R.id.layout2_head);
+
+        // 获取 Intent 中的数据
+        Intent intent = getIntent();
+        String username = intent.getStringExtra("USERNAME_KEY");
+        // 使用用户名，例如设置到文本视图中
+        TextView textView = findViewById(R.id.username);
+        textView.setText(username);
+
         slideMenu = findViewById(R.id.slideMenu);
         mBtnMdc = findViewById(R.id.btn_layout_medicine);
         mBtnLife = findViewById(R.id.btn_layout_main_life);

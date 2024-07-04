@@ -14,7 +14,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         app:shapeAppearanceOverlay="@style/RoundedImageView"
-        android:background="@mipmap/background_head2"
+        android:background="@mipmap/head_icon"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         />

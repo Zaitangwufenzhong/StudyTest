@@ -81,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     //正确的跳转页面
                     Toast.makeText(getApplicationContext(), ok, Toast.LENGTH_LONG).show();
                     intent = new Intent(MainActivity.this, LoginSlideActivity.class);
+                    intent.putExtra("USERNAME_KEY", username);
                     startActivity(intent);
                 } else {
                     //错误的跳转页面( 弹出登陆失败  Toast居中版)

@@ -30,5 +30,10 @@
     <string name="app_web_work_test">test</string>
     <string name="app_web_work_test2">test2</string>
     <string name="app_test">test</string>
-    <string name="clutter_app">clutter APP</string>
+    <string name="clutter_app">clutter</string>
+    <string name="medicine">医药类</string>
+    <string name="life">日用品类</string>
+    <string name="drinks">饮品类</string>
+    <string name="food">食品类</string>
+    <string name="schedule">日程表</string>
 </resources>

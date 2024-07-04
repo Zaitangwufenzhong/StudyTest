@@ -2,6 +2,6 @@
 <resources>
     <style name="RoundedImageView">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">50dp</item>
+        <item name="cornerSize">60dp</item>
     </style>
 </resources>
