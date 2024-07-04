@@ -16,10 +16,35 @@
         app:titleTextColor="@color/white"/>
 
     <TextView
+        android:id="@+id/work_tv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:text="@string/work_fragment"
         android:textSize="50sp"
         android:padding="30dp"/>
+
+    <Button
+        android:id="@+id/test_btn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/app_web_work_test"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        android:background="@color/light_blue"/>
+
+    <Button
+        android:id="@+id/test_btn2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/app_web_work_test2"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="30dp"
+        android:background="@color/light_blue"/>
 
 </LinearLayout>

@@ -18,4 +18,8 @@
     <string name="password">密 码：</string>
     <string name="username">用户名：</string>
     <string name="re_password">确 认 密 码：</string>
+
+    <string name="app_web_toolbar">WebView</string>
+    <string name="app_web_work_test">test</string>
+    <string name="app_web_work_test2">test2</string>
 </resources>
