@@ -8,7 +8,7 @@
     <TextView
         android:id="@+id/tv_title_drinks"
         android:layout_width="90dp"
-        android:layout_height="40dp"
+        android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:textSize="20sp"
         android:textColor="@color/black"
@@ -16,6 +16,7 @@
         />
 
     <ImageView
+        android:id="@+id/tv_icon_drinks"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_marginTop="20dp"

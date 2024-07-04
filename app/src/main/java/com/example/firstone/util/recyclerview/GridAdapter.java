@@ -5,6 +5,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -54,15 +55,18 @@ public class GridAdapter extends RecyclerView.Adapter<GridAdapter.LinearViewHold
 
     class LinearViewHolder extends RecyclerView.ViewHolder {
         private TextView mTitle;
+        private ImageView mImage;
 
         public LinearViewHolder(@NonNull View itemView) {
             super(itemView);
             //布局控件在哪个布局里就要用该布局调用findViewById
             mTitle = itemView.findViewById(R.id.tv_title_drinks);
+            mImage = itemView.findViewById(R.id.tv_icon_drinks);
         }
 
         public void setData(ItemBean itemBean){
             mTitle.setText(itemBean.title);
+            mImage.setImageResource(itemBean.icon);
         }
     }
 

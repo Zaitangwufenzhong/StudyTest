@@ -34,7 +34,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnLogin = findViewById(R.id.btn_login);
         mBtnRegist = findViewById(R.id.btn_register);
         mEtUserId = findViewById(R.id.username);
+        //单行输入
+        //mEtUserId.setSingleLine(true);
         mEtUserPwd = findViewById(R.id.password);
+        //mEtUserPwd.setSingleLine(true);
         //mBtnTest = findViewById(R.id.btn_test);
         mTextView = findViewById(R.id.text_forget);
         mTextView.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG);

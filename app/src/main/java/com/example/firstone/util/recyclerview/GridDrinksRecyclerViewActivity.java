@@ -52,6 +52,7 @@ public class GridDrinksRecyclerViewActivity extends AppCompatActivity {
         for(int i = 0; i < DrinksData.title.length; i++) {
             ItemBean data = new ItemBean();
             data.title= DrinksData.title[i];
+            data.icon = DrinksData.icon[i];
             //添加到集合
             mData.add(data);
         }
